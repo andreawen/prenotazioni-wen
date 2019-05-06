@@ -41,6 +41,23 @@ export class FooComponentComponent implements OnInit {
     this.ween = art;
   }
 
+  vadym(): void
+  {
+    this.loading = true;
+    this.http
+      .post('https://my-json-server.typicode.com/KevinSolimo/JSONServer/Prenotazioni',
+        JSON.stringify({
+          body: 'bar',
+          title: 'foo',
+          userId: 1
+        })
+      )
+      .subscribe(data => {
+        this.data = data;
+        this.loading = false;
+      });
+  }
+
   ngOnInit() {
      this.makeTypedRequest()
   }

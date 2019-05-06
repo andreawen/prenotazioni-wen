@@ -1,11 +1,24 @@
+<div class="container">
+<form>
+ <fieldset>
+  <legend>Form di inserimento:</legend>
+  Nome:  <br><input type="text" id="nome" value=""><br>
+  Cognome:  <br><input type="text" id="cognome" value=""><br>
+  Indirizzo:  <br><input type="text" id="indirizzo" value=""><br>
+  Telefono:  <br><input type="text" id="telefono" value=""><br>
+  Email:  <br><input type="text" id="email" value=""><br>
+  Data prenotazione:  <br><input type="text" id="data" value=""><br>
+  Ora prenotrazione:  <br><input type="text" id="ora" value=""><br>
+  <button type="submit" (click)="vadym(nome.value, cognome.value, indirizzo.value, telefono.value, email.value, data.value, ora.value)">Invia</button>
+ </fieldset>
+</form>
+</div>
+<br><br>
 <div *ngFor="let art of fooData">
 <form>
  <fieldset>
   <legend>Lista prenotazioni:</legend>
       <p (click)="wen(art)">{{art.data}} - {{art.ora}} -> {{art.nome}} {{art.cognome}}</p>
-      <!--<p>{{art.indirizzo}}</p>
-
-      <p>{{art.telefono}} - {{art.email}}</p>-->
  </fieldset>
 </form>
 </div>
@@ -19,6 +32,4 @@
   </app-info>
  </fieldset>
 </form>
-
-
 </div>
