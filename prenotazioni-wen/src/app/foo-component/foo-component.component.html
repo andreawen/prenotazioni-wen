@@ -1,0 +1,11 @@
+<div *ngFor="let art of fooData">
+<form>
+ <fieldset>
+  <legend>Prenotazione:</legend>
+      <b (click)="wen()">{{art.data}} - {{art.ora}} -> {{art.nome}} {{art.cognome}}</b>
+      <!--<p>{{art.indirizzo}}</p>
+
+      <p>{{art.telefono}} - {{art.email}}</p>-->
+ </fieldset>
+</form>
+</div>
