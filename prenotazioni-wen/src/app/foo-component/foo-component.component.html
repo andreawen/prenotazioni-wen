@@ -1,11 +1,24 @@
 <div *ngFor="let art of fooData">
 <form>
  <fieldset>
-  <legend>Prenotazione:</legend>
-      <b (click)="wen()">{{art.data}} - {{art.ora}} -> {{art.nome}} {{art.cognome}}</b>
+  <legend>Lista prenotazioni:</legend>
+      <p (click)="wen(art)">{{art.data}} - {{art.ora}} -> {{art.nome}} {{art.cognome}}</p>
       <!--<p>{{art.indirizzo}}</p>
 
       <p>{{art.telefono}} - {{art.email}}</p>-->
  </fieldset>
 </form>
+</div>
+<br><br>
+<div class="container">
+<form>
+ <fieldset>
+  <legend>Info:</legend>
+    <app-info
+    *ngIf="ween" [art]="ween">
+  </app-info>
+ </fieldset>
+</form>
+
+
 </div>

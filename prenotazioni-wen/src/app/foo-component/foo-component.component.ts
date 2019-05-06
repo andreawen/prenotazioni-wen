@@ -9,7 +9,8 @@ import {Foo} from './foo.model';
   styleUrls: ['./foo-component.component.css']
 })
 export class FooComponentComponent implements OnInit {
-
+  weeen: boolean;
+  ween: Foo;
   fooData : Foo[];
   data: Object;
   loading: boolean;
@@ -34,10 +35,10 @@ export class FooComponentComponent implements OnInit {
     this.oFoo.subscribe(data => {this.fooData = data;});
   }
 
-  wen():void
+  wen(art:Foo):void
   {
-    this.oFoo = this.http.get<Foo[]>(' https://my-json-server.typicode.com/KevinSolimo/JSONServer/Prenotazioni');
-    this.oFoo.subscribe(data => {this.fooData = data;});
+    this.weeen = true;
+    this.ween = art;
   }
 
   ngOnInit() {

@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http'; //Importa Il modulo http
 import { FooComponentComponent } from './foo-component/foo-component.component';
+import { InfoComponent } from './info/info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooComponentComponent
+    FooComponentComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule, HttpClientModule
